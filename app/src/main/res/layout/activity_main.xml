@@ -7,19 +7,37 @@
     android:padding="@dimen/padding_medium"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonOne"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageViewOne"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="@dimen/padding_medium"
-        android:enabled="false"
-        android:text="@string/sound_one" />
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/zdravko_mamic"
+        tools:ignore="ContentDescription" />
 
-    <Button
-        android:id="@+id/buttonTwo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:text="@string/sound_two" />
+    <ImageView
+        android:id="@+id/imageViewTwo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/padding_medium"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mark_zuckerberg"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageViewThree"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/padding_medium"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/elon_musk"
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>

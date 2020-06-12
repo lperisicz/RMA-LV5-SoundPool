@@ -18,26 +18,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupUi() {
-        buttonOne.setOnClickListener {
+        imageViewOne.setOnClickListener {
             R.raw.bells.playMusic()
         }
-        buttonTwo.setOnClickListener {
+        imageViewTwo.setOnClickListener {
             R.raw.car_starting.playMusic()
+        }
+        imageViewThree.setOnClickListener {
+            R.raw.barking.playMusic()
         }
     }
 
     private fun loadSounds() {
         soundPool = SoundPool.Builder()
-                .setMaxStreams(1)
-                .build()
-                .apply {
-                    setOnLoadCompleteListener { _, _, _ ->
-                        arrayOf(buttonOne, buttonTwo).forEach { it.isEnabled = true }
-                    }
-                    arrayOf(R.raw.bells, R.raw.car_starting).forEach {
-                        soundMap[it] = load(this@MainActivity, it, 1)
+            .setMaxStreams(1)
+            .build()
+            .apply {
+                setOnLoadCompleteListener { _, _, _ ->
+                    arrayOf(imageViewOne, imageViewTwo, imageViewThree).forEach {
+                        it.isClickable = true
                     }
                 }
+                arrayOf(R.raw.bells, R.raw.car_starting, R.raw.barking).forEach {
+                    soundMap[it] = load(this@MainActivity, it, 1)
+                }
+            }
     }
 
     private fun Int.playMusic() {
