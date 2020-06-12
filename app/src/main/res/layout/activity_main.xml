@@ -7,35 +7,38 @@
     android:padding="@dimen/padding_medium"
     tools:context=".MainActivity">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageViewOne"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/padding_medium"
         android:clickable="false"
+        android:cropToPadding="true"
         android:scaleType="centerCrop"
         android:src="@drawable/zdravko_mamic"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageViewTwo"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/padding_medium"
         android:clickable="false"
+        android:cropToPadding="true"
         android:scaleType="centerCrop"
         android:src="@drawable/mark_zuckerberg"
         tools:ignore="ContentDescription" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imageViewThree"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/padding_medium"
         android:clickable="false"
+        android:cropToPadding="true"
         android:scaleType="centerCrop"
         android:src="@drawable/elon_musk"
         tools:ignore="ContentDescription" />
